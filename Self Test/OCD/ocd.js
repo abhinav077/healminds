@@ -24,6 +24,23 @@ var set5=["Do you check things more often than necessary? "," Do you get upset i
 var set6=["Do you check things more often than necessary? "," Do you get upset if objects are not arranged properly (or as you want them to)? ","Do you feel compelled to count while you are already doing things? "," Do you find it difficult to touch an object when you know it has been touched by strangers or certain people? ","Do you collect things you don’t need? ","Do you repeatedly check doors, windows, drawers, etc? ","Do you get upset if others change the way you have arranged things? ","Do you sometimes have to wash or clean yourself simply because you feel contaminated? ","Do you get upset by unpleasant thoughts that come into your mind against your will? ","Do you avoid throwing things away because you are afraid you might need them later? " ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -151,8 +168,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -213,7 +234,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -247,6 +268,8 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -276,7 +299,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

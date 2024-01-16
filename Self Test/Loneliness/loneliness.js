@@ -23,6 +23,21 @@ var set5=["Do you feel unhappy doing so many things alone? "," Do you feel you h
 var set6=["Do you feel unhappy doing so many things alone? "," Do you feel you have nobody to talk to? ","Do you feel you cannot tolerate being so alone? "," Do you feel as if nobody really understands you? ","Do you find yourself waiting for people to call or write? ","Do you feel completely alone? ","Do you feel you are unable to reach out and communicate with those around you? ","Do you feel starved for company? ","Do you feel it is difficult for you to make friends?","Do you feel shut out and excluded by others?" ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -150,8 +165,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -212,7 +231,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -246,6 +265,8 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -275,7 +296,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

@@ -23,6 +23,30 @@ var set5=["Do you have trouble staying focused on the present moment? "," How of
 var set6=["Do you have trouble staying focused on the present moment? "," How often do you feel overwhelmed with your life? ","Do you struggle to fall asleep at night? "," On average, do you get less than 7-8 hours of sleep a night? ","Do you turn to unhealthy food indulgences such as eating junk food, drinking excessively, or eating sugary foods when feeling overwhelmed? ","Do you experience headaches or muscle tension? ","During work hours, do you have a hard time staying focused and concentrating on the task-at-hand? ","Do you feel pain or tension in your stomach, muscles, chest, or head? ","Do you feel like withdrawing from family, friends, and isolating yourself? ",". Is there been an increase in your daily habits such as using alcohol, drugs, or tobacco to self-soothe" ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -150,8 +174,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -212,7 +240,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -246,6 +274,7 @@ function results(){
 	}
 }
 
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -275,7 +304,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

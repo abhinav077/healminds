@@ -211,6 +211,7 @@ body{
 
 .nav__link:hover {
   background-color: var(--black-color-light);
+  
 }
 
 /* Show menu */
@@ -328,6 +329,7 @@ body{
   }
   .nav__link:hover {
     background-color: transparent;
+    scale: 1.1;
   }
 
   .dropdown__item, 

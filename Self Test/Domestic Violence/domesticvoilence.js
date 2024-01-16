@@ -24,6 +24,15 @@ var set5=["Do you feel anxious or nervous around your partner? "," Do you keep a
 var set6=["Do you feel anxious or nervous around your partner? "," Do you keep a watch on what you’re doing to avoid making your partner angry or upset? ","Are you afraid of voicing a different opinion than your partner? "," Does your partner criticize or embarrasses you in front of others? ","Does your partner check up on you often and doesn’t believe you when you tell them what you’re doing or often accuses you of having affairs? ","Does your partner physically abuse you and tells you they’ll stop when you start behaving yourself (blame you for their toxic and violent behavior)? ","Does your partner’s behavior often make you feel that you’re wrong? ","Does your partner keep you from going out or doing things you want to do? ","Do you feel like nothing you do is ever good enough for your partner? ","Does your partner threaten to kill themselves if you try to leave them? " ];
 
 
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -151,8 +160,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -213,7 +226,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -247,6 +260,8 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -276,7 +291,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

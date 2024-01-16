@@ -20,6 +20,8 @@ var set5=["Do you find it very hard to unwind, relax or sit still? ","Do you bec
 
 var set6=["Do you find it very hard to unwind, relax or sit still? ","Do you become irritable and easily annoyed? ","Do you experience shortness of breath or out of breath at times? "," Do you feel dizzy and unsteady at times? ","Do you have difficulties with sleep (including waking early, finding it hard to go to sleep or staying asleep for long hours)? ","Do you feel panicked and overwhelmed by things in your life? ","Do you feel nervous and on edge? ","Do you have trembling hands? ","Do you constantly keep worrying about things? ","Does worry or anxiety make you feel fatigued or worn out?" ];
 
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -147,8 +149,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -209,7 +215,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -243,6 +249,7 @@ function results(){
 	}
 }
 
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -272,7 +279,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

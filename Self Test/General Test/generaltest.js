@@ -21,6 +21,17 @@ var set5=["How often have you been bothered by trouble failing or staying asleep
 var set6=["How often have your loved one been bothered by trouble failing or staying asleep, or sleeping too much ? ","How often have your loved one had little interest or pleasure in doing things? ","How often have your loved one been bothered by feeling down, depressed or hopeless? ","How often have your loved one been bothered by poor apetite or overeating? ","How often have your loved one been bothered by trouble concentrating on things, such as reading the newspaper? ","How often your loved one feel struggling in work or daily visiting places and tend to think it is because he or she is not smart enough? ","How often have your loved one been bothered by having trouble relaxing after work or anytime? ","Have your loved one felt like an anxiety attack ( suddenly feeling fear or panic ) ?","How often your loved one feel like he or she don't have someone who can love him or her? ","How many times have your loved one been bothered by getting easily annoyed or irritable? " ];
 
 
+
+
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -148,8 +159,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -210,7 +225,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -244,18 +259,14 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
     var infoTemp = '<div id="infoFlex">'+
     '<div id="headInfo">Please provide the primary info</div>'+
     '<div id="optionOne" class="options">'+
-    '<select class="optional" onchange="selfs(this)">'+
-      '<option selected>You are taking this test for</option>'+
-      '<option value="1">Yourself</option>'+
-      '<option value="2">Your Loved One</option>'+
-      '</select>'+
-      '<br>'+
       '<select class="optional" onchange="ages(this)">'+
         '<option selected>Your Age</option>'+
         '<option value="1">Between 16 to 35</option>'+
@@ -279,7 +290,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

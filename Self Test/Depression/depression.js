@@ -20,6 +20,14 @@ var set5=["Do you find pleasure in doing things? ","Do you feel down, depressed,
 
 var set6=["Do you find pleasure in doing things? ","Do you feel down, depressed, or hopeless? ","Do you feel guilty about things most of the time? "," Do you find trouble falling or staying asleep, or sleeping too much? ","Do you Feel tired or low energy? ","Do you think you have a poor appetite, or do you overeat? ","Do you feel bad about yourself - or that you are a failure or have let yourself or your family down? ","Do you feel irritated and annoyed by things in your life? ","Do you find decision making whether small or big is easy? ","Ate you conscious about looks and other people Pov about you? " ];
 
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -147,8 +155,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -209,7 +221,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -243,6 +255,8 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -272,7 +286,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

@@ -20,6 +20,11 @@ var set5=["Do you tend to notice small details that others don’t? ","Do you en
 
 var set6=["Do you tend to notice small details that others don’t? ","Do you enjoy social gatherings and/or find social situations easy? ","Have you been told that what you’ve said is impolite, even though you think it is polite? "," Do you find it hard to keep a conversation going? ","Do you find it difficult to imagine what it would be like to be someone else? ","Do you have strong interests and get upset if you can’t pursue them? ","When you talk, is it easy for others to get a word in? ","Do you find it hard to figure out people’s intentions? ","Do new situations make you feel anxious and nervous? ","Do you recognize any patterns in things all the time? " ];
 
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -147,8 +152,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -209,7 +218,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -243,6 +252,8 @@ function results(){
 	}
 }
 
+
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -272,7 +283,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }

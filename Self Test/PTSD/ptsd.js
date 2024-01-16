@@ -24,6 +24,27 @@ var set5=["Does any reminder or anything similar happening bring back feelings a
 var set6=["Does any reminder or anything similar happening bring back feelings about the event? "," Do you avoid letting yourself get upset when you think about it or was reminded of it? ","Do you think about the event when you don’t even want to? "," Do you feel as if the event never happened, or it wasn't real? ","Do Images and pictures of the event pop into your mind? ","Do you feel quite ‘numb’ about the situation? ","Do you find yourself acting / feeling like you are back at the time of the event? ","Does the reminder of the event cause you to have physical reactions such as sweating, palpitations, panic attacks? ","Do you have dreams about the situation that happened or your past traumas? ","Do you feel on-guard and struggle to relax? " ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -151,8 +172,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -213,7 +238,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -247,6 +272,7 @@ function results(){
 	}
 }
 
+
 function startTheTest(){
 	shown();
     document.getElementById('box2').innerHTML = "";
@@ -276,7 +302,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }
