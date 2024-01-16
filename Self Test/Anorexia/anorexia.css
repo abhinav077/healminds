@@ -65,7 +65,7 @@ body{
 }
 #startText{
     margin-left: 30px;
-    margin-top: 10px;       
+    margin-top: 10px;
     width: 200px;
     background-color: rgb(255, 255, 0);
     cursor: pointer;
@@ -197,7 +197,7 @@ a{
 
 .question{
     font-size: 20px;
-    font-family: 'Quicksand', sans-serif;    
+    font-family: 'Quicksand', sans-serif;
 }
 
 #buttonQuesFlex{
@@ -212,16 +212,16 @@ a{
     width: 250px;
     border-radius: 7px;
     border-width: 0;
-    font-family: 'Quicksand', sans-serif;   
-    background-color: rgb(19, 43, 50); 
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(19, 43, 50);
     color: white;
     box-shadow: 10px 15px 25px 1px rgba(0, 0, 0, 0.559);
 }
 
 .buttonOption:hover{
-    background-color: rgb(120, 176, 176);  
+    background-color: rgb(120, 176, 176);
     color: black;
-    font-weight: bold; 
+    font-weight: bold;
     cursor: pointer;
     box-shadow: 10px 15px 10px 0px rgba(0, 0, 0, 0.559);
 }
@@ -248,7 +248,7 @@ a{
     cursor: pointer;
 }
 
-#startNew{    
+#startNew{
     margin-top: 20px;
     width: 100px;
     height: auto;
@@ -271,7 +271,7 @@ a{
     padding: 10px;
     border-radius: 10px;
     width: 250px;
-    font-family: 'Quicksand', sans-serif;  
+    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     box-shadow: 6px 5px 25px 1px rgba(0, 0, 0, 0.559);
 }
@@ -304,7 +304,7 @@ a{
     border-radius: 10px;
     border: 0px solid black;
     margin: 25px 0;
-    font-family: 'Quicksand', sans-serif;  
+    font-family: 'Quicksand', sans-serif;
     box-shadow: 6px 5px 25px 1px rgba(0, 0, 0, 0.559);
 }
 
@@ -331,7 +331,7 @@ a{
 
 
 @media screen and (max-width: 480px) {
-    
+
     #buttons{
         flex-direction: column;
         align-items: center;
@@ -340,4 +340,7 @@ a{
     #startText{
         margin-left: 0;
     }
+}
+#error{
+    color: red;
 }
