@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healminds Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+     .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+    </style>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header ">
+        <nav class="nav container2">
+           <div class="nav__data px-16">
+              <a href="index.html" class="nav__logo">
+                 <i class="ri-planet-line"></i> HEALMINDS
+              </a>
+              
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu px-16" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="./index.html" class="nav__link">Home</a></li>
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       Get Support ▼ <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+               
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                       <li class="dropdown__subitem">
+                          <div class="dropdown__link">
+                             <i class="ri-bar-chart-line"></i> Mental Health ► <i class="ri-add-line dropdown__add"></i>
+                          </div>
+
+                          <ul class="dropdown__submenu">
+                             <li>  
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-file-list-line"></i> ADHD
+                                </a>
+                             </li>
+     
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-cash-line"></i> Anorexia
+                                </a>
+                             </li>
+     
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Anxiety
+                                </a>
+                             </li>
+
+                             <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> Autism
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> Depression
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> Domestic Violence
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> Loneliness
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> OCD
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> PTSD
+                               </a>
+                            </li>
+
+                            <li>
+                               <a href="#" class="dropdown__sublink">
+                                  <i class="ri-refund-2-line"></i> Stress
+                               </a>
+                            </li>
+
+                          </ul>
+                       </li>
+                       
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i>Self Test ►<i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>  
+                                 <a href="Self Test/ADHD/ADHD index.html" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> ADHD
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Anorexia
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Anxiety
+                                 </a>
+                              </li>
+
+                              <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Autism
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Depression
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Domestic Violence
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Loneliness
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> OCD
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> PTSD
+                                </a>
+                             </li>
+
+                             <li>
+                                <a href="#" class="dropdown__sublink">
+                                   <i class="ri-refund-2-line"></i> Stress
+                                </a>
+                             </li>
+                    </ul>                     
+                 </li>
+               </ul>
+
+                 
+                 
+                   <li><a href="chatBot.html" class="nav__link">Support</a></li>
+
+                 
+           </div>
+        </nav>
+     </header>
+
+    <div class="rounded-t-lg bg-gray-100 no-scrollbar border-b-0 mt-32 mx-10 h-60 overflow-y-scroll p-1 border border-black" id="chat-container"></div>
+    <div class="mx-10 flex mb-32">
+        <input class="h-8 border border-r-0 border-gray-400 px-2 rounded-bl-lg bg-gray-100 w-11/12" type="text" id="user-input" placeholder="Type your message...">
+    <button class="w-1/12 h-8 bg-gray-400 rounded-br-lg hover:bg-gray-300" onclick="sendMessage()">Send</button>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>Discover <br>
+                        Healminds</h2>
+                    
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Connect</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Explore Topics</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Read</h4>
+                    <ul>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        userInput.addEventListener('keydown',(e)=>{
+            if(e.key==="Enter") sendMessage()
+        })
+
+        function appendMessage(message, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.innerText = `${sender}: ${message}`;
+            chatContainer.appendChild(messageElement);
+            userInput.value = '';
+        }
+
+        function sendMessage() {
+            const userMessage = userInput.value.trim();
+            if (userMessage === '') return;
+
+            appendMessage(userMessage, 'You');
+
+            const apiUrl = 'https://gpt-netflix-backend.vercel.app/api/openai-request';
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    searchText: userMessage,
+                    max_tokens: 150
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botMessage = data?.choices[0]?.message?.content;
+                appendMessage(botMessage, 'Assistant');
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</body>
+</html>
