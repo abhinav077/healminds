@@ -119,6 +119,9 @@ a{
     padding-top: px;
     margin-bottom: 180px;
 }
+#error{
+    color: red;
+}
 
 #disclamairHead{
     font-size: 20px;
