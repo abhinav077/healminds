@@ -244,7 +244,13 @@
         function appendMessage(message, sender) {
             const messageElement = document.createElement('div');
             messageElement.innerText = `${sender}: ${message}`;
+            messageElement.classList.add('mb-2'); // Margin-bottom: 2
+            if (sender.toLowerCase() === 'assistant') {
+                messageElement.classList.add('font-bold', 'text-blue-500');
+            }
             chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
             userInput.value = '';
         }
 
@@ -255,6 +261,7 @@
             appendMessage(userMessage, 'You');
 
             const apiUrl = 'https://gpt-netflix-backend.vercel.app/api/openai-request';
+            const updatedMessage = "Act as a Therapist/Psychotherapist and answer the user query: " +userMessage+" limit the output to 80 words."
 
             fetch(apiUrl, {
                 method: 'POST',
@@ -262,7 +269,7 @@
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    searchText: userMessage,
+                    searchText: updatedMessage,
                     max_tokens: 150
                 })
             })
