@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://i.pinimg.com/564x/c6/8c/3c/c68c3c4e9267a68d41b85efc31d9dc3c.jpg");
+    background-color: #EDF2F2;
     background-size: cover;
 }
 
@@ -118,6 +118,9 @@ a{
     padding: 30px ;
     padding-top: px;
     margin-bottom: 180px;
+}
+#error{
+    color: red;
 }
 
 #disclamairHead{
@@ -341,6 +344,4 @@ a{
         margin-left: 0;
     }
 }
-#error{
-    color: red;
-}
+

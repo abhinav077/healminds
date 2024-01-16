@@ -77,6 +77,14 @@ body{
     z-index: var(--z-fixed);
     transition: background-color 0.3s ease;
 }
+.header2{
+  background-color: #B6D8D8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .rectangle{
     margin-top: 6px;
     margin-left: 43px; /* Adjust the negative margin to position it above the image */
@@ -657,6 +665,11 @@ ul{
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
+}
+.footer-col h2{
+margin-left: 10vb;
+
+
 }
 .btn-text{
     color: white;

@@ -29,9 +29,6 @@ var set6=["How often have your loved one been bothered by trouble failing or sta
 
 
 
-
-
-
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -294,7 +291,6 @@ function startTheTest(){
 	'<p id="error"></p>'+
 
     '</div>';
-
     document.getElementById('box2').innerHTML = infoTemp;
 
 }
