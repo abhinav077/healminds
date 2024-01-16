@@ -20,7 +20,6 @@ var set5=["Are you terrified of being overweight? ","Do you avoid eating even wh
 
 var set6=["Are you terrified of being overweight? ","Do you avoid eating even when you're hungry? ","Do you find yourself preoccupied with food? "," Do you have eating binges where you feel you might not be able to stop? ","Do you check or calculate the calorie content of everything you eat, or do you eat diet foods on an everyday basis?  ","Do Others tell you to eat more or they think you’re thin or do you feel that others pressurize you to eat? ","Do you purposely make yourself vomit after eating because eating excess food makes you feel guilty? ","Do you think about burning up calories whenever you exercise? ","Do you take longer to eat meals than other people do? ","Do you feel that food controls your life and emotions? " ];
 
-
 function shown(){
     document.getElementById('box').style.display="none";
 	var disc = "<div id='disclamairHead'>Health is Wealth! </div>"+
@@ -148,8 +147,12 @@ function loss(los){
 }
 
 
-
+let error = "";
 function start(){
+	error=""
+	if(genVar===1 || lossVar === 1 || ageVar===1) { error = "Fill all the details";    document.getElementById('error').innerHTML = error;
+
+	return};
 if(genVar==2){
 	score += 1;
 }
@@ -210,7 +213,7 @@ function endMsg(advise){
 }
 
 function results(){
-	alert('You have successfully answered all the questions!!')
+	console.log('You have successfully answered all the questions!!')
     document.getElementById('box2').innerHTML = "";
 	var templates;
 	if(score>=40){
@@ -273,7 +276,11 @@ function startTheTest(){
   '<br>'+
     '</select>'+
     '</div>'+
-    '<button id="nextTest" onclick="start()">NEXT</button>'
+    '<button id="nextTest" onclick="start()">NEXT</button>'+
+	'<p id="error"></p>'+
+
     '</div>';
+
     document.getElementById('box2').innerHTML = infoTemp;
+
 }
